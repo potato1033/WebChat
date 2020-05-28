@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% load custom_tags %}
+{% block page-container %}
+    <div class="wrap-left">
+     {% for article in article_list %}
+         <div class="article-box">
+             <div class="article-head-img">
+                 <img src="/static/{{article.author.head_img|truncate_url}}"/>
+             </div>>
+             <div class="article-title">
+                 {{ article.title}}
+             </div>
+             <div class="article-brief">
+                 {{ article.brief}}
+             </div>
+         </div>>
+     {% endfor %}
+    </div>>
+    <div class="wrap-right">
+    sss
+    </div>>
+    <div class="clear-both"></div>>
+{% endblock %}
+</body>
+</html>

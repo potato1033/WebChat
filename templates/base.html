@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://v3.bootcss.com/examples/non-responsive/ -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Note there is no responsive meta tag here -->
+
+    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+
+    <title>Non-responsive Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/static/bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/bootstrap/css/non-responsive.css" rel="stylesheet">
+    <link href="/static/bootstrap/css/custom.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/static/bootstrap/js/ie-emulation-modes-warning.js.下载"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+
+  <body>
+  <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- The mobile navbar-toggle button can be safely removed since you do not need it in a non-responsive implementation -->
+          <a class="navbar-brand" href="https://v3.bootcss.com/examples/non-responsive/#">土豆论坛</a>
+        </div>
+        <!-- Note that the .navbar-collapse and .collapse classes have been removed from the #navbar -->
+        <div id="navbar" class="navbar-collapse collapse">
+        {% block top-head %}
+          <ul class="nav navbar-nav">
+            {% for category in category_list %}
+              {% if  category_obj.id == category.id %}
+                <li class="active"><a href="{% url 'category_detail'  category.id  %}">{{ category.name }}</a></li>
+              {% else %}
+                <li class=""><a href="{% url 'category_detail' category.id %}">{{ category.name }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endblock %}
+         </div>
+      </div>>
+    </nav>>
+
+  <div class="page-container">
+    {% block page-container %}
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h2>your owner stuff</h2>
+      </div>
+    {% endblock %}
+      <footer class="footer">
+      sssss
+      </footer>>
+  </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/bootstrap/js/jquery.min.js.下载"></script>
+
+    <script src="/static/bootstrap/js/bootstrap.min.js.下载"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/static/bootstrap/js/ie10-viewport-bug-workaround.js.下载"></script>
+</body></html>

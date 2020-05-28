@@ -1,0 +1,31 @@
+.page-container{
+    border: 1px solid green;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.wrap-left{
+    width: 75%;
+    background-color: #dca7a7;
+    float:left;
+}
+
+.wrap-right{
+    width: 25%;
+    background-color: #5bc0de;
+    float: right;
+}
+
+.clear-both{
+    clear:both;
+}
+
+.footer{
+    height: 200px;
+    background-color: #3c3c3c;
+}
+
+.article-head-img img{
+    height: 125px;
+    width: 220px;
+}
